@@ -19,7 +19,7 @@ public class WebDriverFactory {
 
     //garantees only one instance of driver is used
     public static WebDriver driver = getDriver(DriverType.CHROME);
-    public static WebDriverWait wait;
+    public static WebDriverWait wait = getWebDriverWait(driver);
 
 
     protected WebDriverFactory() {

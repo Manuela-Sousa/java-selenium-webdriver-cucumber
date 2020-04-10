@@ -35,7 +35,7 @@ public class SharedActions {
         search.sendKeys(Keys.ENTER);
 
     }
-    
+
     public void insertKeys(String value, By element){
         WebElement text_element = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(element));

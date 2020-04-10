@@ -23,9 +23,11 @@ public class LoginPage {
         return By.xpath("(//input[@id='continue'])[1]");
     }
 
-    public void login() {
+    public void login(String email, String password) {
         sharedActions.clickOnElement(SignInOption());
-
+        sharedActions.insertKeys(email, EmailTextfield());
+        sharedActions.clickOnElement(ButtonContinue());
+        sharedActions.insertKeys(password, PasswordTextfield());
 
     }
 }

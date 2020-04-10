@@ -16,9 +16,9 @@ public class LoginStepDefinitions {
         driver.get("https://www.amazon.com");
     }
 
-    @When("^Makes login with valid <user> and <password>$")
-    public void makesLoginWithValidUserAndPassword() throws Throwable {
-        loginPage.login();
+    @When("^Makes login with valid (.*) and (.*)$")
+    public void makesLoginWithValidUserAndPassword(String email, String password) throws Throwable {
+        loginPage.login(email, password);
     }
 
     @Then("^See user logged in menu$")
