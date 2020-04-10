@@ -1,0 +1,31 @@
+package test.definitions.page_objects;
+
+import org.openqa.selenium.By;
+import test.definitions.actions.SharedActions;
+
+public class LoginPage {
+
+    SharedActions sharedActions = new SharedActions();
+
+    public static By SignInOption() {
+        return By.id("nav-link-accountList");
+    }
+
+    public static By EmailTextfield() {
+        return By.id("ap_email");
+    }
+
+    public static By PasswordTextfield() {
+        return By.id("ap_password");
+    }
+
+    public static By ButtonContinue() {
+        return By.xpath("(//input[@id='continue'])[1]");
+    }
+
+    public void login() {
+        sharedActions.clickOnElement(SignInOption());
+
+
+    }
+}
