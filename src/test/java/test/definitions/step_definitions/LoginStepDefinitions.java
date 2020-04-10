@@ -12,17 +12,17 @@ public class LoginStepDefinitions {
     LoginPage loginPage = new LoginPage();
 
     @Given("^The user opens Amazon website$")
-    public void theUserIsInAmazonWebsite() throws Throwable {
+    public void theUserIsInAmazonWebsite() {
         driver.get("https://www.amazon.com");
     }
 
     @When("^Makes login with valid (.*) and (.*)$")
-    public void makesLoginWithValidUserAndPassword(String email, String password) throws Throwable {
+    public void makesLoginWithValidUserAndPassword(String email, String password) {
         loginPage.login(email, password);
     }
 
-    @Then("^See user logged in menu$")
-    public void seeUserLoggedInMenu() throws Throwable {
-
+    @Then("^Sees user logged in menu$")
+    public void seeUserLoggedInMenu() {
+        loginPage.sees_logged_in_user();
     }
 }

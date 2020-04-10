@@ -7,7 +7,7 @@ Feature: Make login in amazon website
 
     Given The user opens Amazon website
     When Makes login with valid <user> and <password>
-    Then See user logged in menu
+    Then Sees user logged in menu
 
     Examples:
       | user                         | password       |

@@ -23,11 +23,24 @@ public class LoginPage {
         return By.xpath("(//input[@id='continue'])[1]");
     }
 
+    public static By ButtonSignIn() {
+        return By.id("signInSubmit");
+    }
+
+    public static By AccountLoggedIn() {
+        return By.xpath("//span[text()='Hello, Manuela']");
+    }
+
     public void login(String email, String password) {
         sharedActions.clickOnElement(SignInOption());
         sharedActions.insertKeys(email, EmailTextfield());
         sharedActions.clickOnElement(ButtonContinue());
         sharedActions.insertKeys(password, PasswordTextfield());
+        sharedActions.clickOnElement(ButtonSignIn());
 
+    }
+
+    public void sees_logged_in_user() {
+        sharedActions.verifyIsDisplayed(AccountLoggedIn());
     }
 }
