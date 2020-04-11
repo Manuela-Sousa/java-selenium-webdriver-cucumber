@@ -37,7 +37,7 @@ public class SharedActions {
 
     }
 
-    public void insertKeys(String value, By element){
+    public void insertKeys(String value, By element) {
         WebElement text_element = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(element));
         text_element.sendKeys(value);

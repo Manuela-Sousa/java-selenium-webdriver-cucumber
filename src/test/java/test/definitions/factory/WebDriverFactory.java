@@ -22,11 +22,11 @@ public class WebDriverFactory {
     public static WebDriverWait wait = getWebDriverWait(driver);
 
 
-    protected WebDriverFactory() {
-        //prevent instantiation
+    private WebDriverFactory() {
+        // Declaring constructor as private to restrict object creation outside of class
     }
 
-    public static WebDriver getChromeDriver() {
+    private static WebDriver getChromeDriver() {
 
         if (driver == null) {
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\manue\\java-selenium-webdriver-cucumber-sample-framework\\src\\test\\resources\\drivers\\chromedriver.exe");
@@ -35,7 +35,7 @@ public class WebDriverFactory {
         return driver;
     }
 
-    public static WebDriver getFirefoxDriver() {
+    private static WebDriver getFirefoxDriver() {
         if (driver == null) {
             System.setProperty("webdriver.firefox.driver", "C:\\Users\\manue\\java-selenium-webdriver-cucumber-sample-framework\\src\\test\\resources\\drivers\\geckodriver.exe");
             driver = new FirefoxDriver();
@@ -44,11 +44,11 @@ public class WebDriverFactory {
     }
 
 
-    public static WebDriver getDriver(DriverType driver) {
+    private static WebDriver getDriver(DriverType driver) {
         return driverMap.get(driver);
     }
 
-    public static WebDriverWait getWebDriverWait(WebDriver driver) {
+    private static WebDriverWait getWebDriverWait(WebDriver driver) {
         if (wait == null) {
             return new WebDriverWait(driver, 30);
         }
