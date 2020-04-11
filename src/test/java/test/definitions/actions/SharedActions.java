@@ -21,10 +21,11 @@ public class SharedActions {
     }
 
 
-    public void clickOnElement(By element) {
+    public SharedActions clickOnElement(By element) {
         WebElement element_click = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(element));
         element_click.click();
+        return this;
 
     }
 
