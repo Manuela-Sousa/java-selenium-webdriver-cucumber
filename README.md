@@ -1,5 +1,6 @@
 # Sample project to use Selenium Webdriver tests with Cucumber and Java
 
+This is a sample project to use Selenium Webdriver tests with Cucumber and Java.
 
 ### Organization of the project
 
