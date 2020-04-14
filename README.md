@@ -29,5 +29,5 @@ Singleton Pattern is used to have only one instance of the web driver in use acr
 Page Object Pattern is used to improve test automation maintenance and reducing code duplication and it is applied to this project in page_objects folder. The classes inside page_objects folder represent the locators for web elements of each different page from the website used for tests and their separation from tests that are in resources folder.  
 The custom Page Object Pattern says that actions associate with features and with page objects should also be in this classes along with locators. Due to the violation of Single Reponsability Principle that states that classes can only have one reason to change, regarding the SOLID principles of object oriented programming language, in this project each group of actions associated with the features and with page objects of each page, are in a new class in actions folder.
 
-##### To Run
+### To Run
 After clone this project and open with JetBrains Intellij is it needed to change the location of web drivers path that are specified in DriverFactory class to the path of drivers location and go to one of the cucumber features implemented and make run scenario.
