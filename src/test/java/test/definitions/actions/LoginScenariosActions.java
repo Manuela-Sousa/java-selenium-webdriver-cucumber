@@ -1,10 +1,19 @@
 package test.definitions.actions;
 
+import static test.definitions.actions.SharedActions.getSharedActions;
 import static test.definitions.page_objects.LoginPage.*;
 
 public class LoginScenariosActions {
 
-    SharedActions sharedActions = new SharedActions();
+    SharedActions sharedActions = getSharedActions();
+
+    public LoginScenariosActions() {
+        //hide it
+    }
+
+    public static LoginScenariosActions getLoginScenariosActions() {
+        return new LoginScenariosActions();
+    }
 
     public LoginScenariosActions login(String email, String password) {
         sharedActions.clickOnElement(SignInOption());

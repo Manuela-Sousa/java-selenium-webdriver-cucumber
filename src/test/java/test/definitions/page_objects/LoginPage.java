@@ -4,6 +4,14 @@ import org.openqa.selenium.By;
 
 public class LoginPage {
 
+    public LoginPage() {
+        //hide it
+    }
+
+    public static LoginPage getLoginPage() {
+        return new LoginPage();
+    }
+
     public static By SignInOption() {
         return By.id("nav-link-accountList");
     }

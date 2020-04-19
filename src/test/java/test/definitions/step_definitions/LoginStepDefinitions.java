@@ -5,11 +5,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import test.definitions.actions.LoginScenariosActions;
 
+import static test.definitions.actions.LoginScenariosActions.getLoginScenariosActions;
 import static test.definitions.factory.WebDriverFactory.driver;
 
 public class LoginStepDefinitions {
 
-    LoginScenariosActions loginPage = new LoginScenariosActions();
+    LoginScenariosActions loginPage = getLoginScenariosActions();
 
     @Given("^The user opens Amazon website$")
     public void theUserIsInAmazonWebsite() {

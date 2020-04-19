@@ -11,6 +11,10 @@ import static test.definitions.factory.WebDriverFactory.wait;
 
 public class SharedActions {
 
+    public SharedActions() {
+        //hide it
+    }
+
     public static SharedActions getSharedActions() {
         return new SharedActions();
     }
